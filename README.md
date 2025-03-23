@@ -3,8 +3,12 @@ Here’s your **README.md** file with proper Markdown formatting:
 ```md
 # 🚀 Gadgets Inventory - Node.js & Angular 18  
 
+---
 A secure inventory management system built with **Node.js (Express) & Angular 18**, featuring **JWT authentication**, CRUD operations, and role-based access.  
 
+---
+
+📱 Buy Me a Coffee : https://buymeacoffee.com/pravin.bambale
 ---
 
 ## 📌 Features  
@@ -108,8 +112,10 @@ We welcome contributions!
 ---
 
 ## 📌 Developed by **Pravin Bambale**  
-📧 Connect with me | 📱 Scan QR to Support (Attach QR here)  
-
-```
+📌 Developed by Pravin Bambale
+📧 Email: your-email@example.com
+🔗 LinkedIn: linkedin.com/in/yourprofile
+🐙 GitHub: github.com/yourgithub
+📱 Buy Me a Coffee : https://buymeacoffee.com/pravin.bambale
 
 This will format well on GitHub and provide a professional README for your project. 🚀 Let me know if you need any modifications!
