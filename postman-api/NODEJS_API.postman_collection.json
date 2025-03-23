@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "82aa6753-8b28-429a-9d1e-02585e26cf55",
+		"name": "NODEJS_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43292634"
+	},
+	"item": [
+		{
+			"name": "check connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/connection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"connection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth-register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pravin Bambale\",\r\n    \"email\": \"pravinbambale@gmail.com\",\r\n    \"password\": \"Abcd@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth-login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pravinbambale@gmail.com\",\r\n    \"password\": \"Abcd@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gadgets - create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 16 Pro Max\",\r\n    \"description\":\" 512 GB Titanium Red 32GB RAM ETC\",\r\n    \"price\":\"148000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gadgets - get all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 14\",\r\n    \"description\":\" 256 GB Titanium Black 14GB RAM ETC\",\r\n    \"price\":\"140000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gadgets - get details by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 14\",\r\n    \"description\":\" 256 GB Titanium Black 14GB RAM ETC\",\r\n    \"price\":\"140000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/details/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth- user-details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 14\",\r\n    \"description\":\" 256 GB Titanium Black 14GB RAM ETC\",\r\n    \"price\":\"140000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/details/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"details",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gadgets - update details by id Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 14 Pro Max\",\r\n    \"description\":\" 256 GB Titanium Black 14GB RAM ETC\",\r\n    \"price\":\"156000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/update/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "gadgets - delete details by id Copy 2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcmF2aW5iYW1iYWxlQGdtYWlsLmNvbSIsImlhdCI6MTc0MjQ5MzA0MiwiZXhwIjoxNzQyNDk2NjQyfQ.VZD-ElrYM2dH83FcXVYQgDMkUslqUMDINI83J5UecTY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone 14\",\r\n    \"description\":\" 256 GB Titanium Black 14GB RAM ETC\",\r\n    \"price\":\"140000\",\r\n    \"secretInfo\":\"imported from the chain 2024 model\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/gadgets/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"gadgets",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
