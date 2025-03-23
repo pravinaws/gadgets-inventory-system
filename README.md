@@ -113,9 +113,8 @@ We welcome contributions!
 
 ## 📌 Developed by **Pravin Bambale**  
 📌 Developed by Pravin Bambale
-📧 Email: your-email@example.com
-🔗 LinkedIn: linkedin.com/in/yourprofile
-🐙 GitHub: github.com/yourgithub
+📧 Email: pravin.bambale@gmail.com
+🔗 LinkedIn: linkedin.com/in/pravinbambale
 📱 Buy Me a Coffee : https://buymeacoffee.com/pravin.bambale
 
 This will format well on GitHub and provide a professional README for your project. 🚀 Let me know if you need any modifications!
