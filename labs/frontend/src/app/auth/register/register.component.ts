@@ -16,7 +16,7 @@ constructor(private authService: AuthService, private router : Router) {
     const token = localStorage.getItem('token'); // Retrieve token from local storage
     if (!token) {
       // alert('Unauthorized. Please log in.');
-      this.router.navigate(['/login']);
+      this.router.navigate(['/register']);
       return;
     }else{
       this.router.navigate(['/gadgets/list']);
