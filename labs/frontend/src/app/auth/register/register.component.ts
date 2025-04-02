@@ -12,7 +12,16 @@ export class RegisterComponent {
   email = '';
   password = '';
 
-  constructor(private authService: AuthService) {}
+constructor(private authService: AuthService, private router : Router) {
+    const token = localStorage.getItem('token'); // Retrieve token from local storage
+    if (!token) {
+      // alert('Unauthorized. Please log in.');
+      this.router.navigate(['/login']);
+      return;
+    }else{
+      this.router.navigate(['/gadgets/list']);
+    }
+  }
 
   onRegister() {
     this.authService.register(this.name, this.email, this.password);
